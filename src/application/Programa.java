@@ -10,12 +10,11 @@ public class Programa {
 		
 		minhaConta.titular = "Samuel Santos";
 		minhaConta.numero = 12289;
-		minhaConta.saldo = 200.01;
+		minhaConta.saldo = 202.01;
 
 		meuSonho.titular = "Jojoca Santos";
 		meuSonho.numero = 12288;
 		meuSonho.saldo = 200000.86;
-
 		
 		
 		System.out.println("Saldo atual: " + minhaConta.saldo);
@@ -28,8 +27,6 @@ public class Programa {
 		}else {
 			System.out.println("Erro...Verifique o saldo...!!");
 		}
-		
-		
 		
 		System.out.println("Saldo depois de sacar: " + minhaConta.saldo);
 		
