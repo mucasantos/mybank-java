@@ -7,15 +7,21 @@ public class Programa {
 		
 		Conta minhaConta = new Conta();
 		Conta meuSonho = new Conta();
-		
-		minhaConta.titular = "Samuel Santos";
+ 		
+		minhaConta.titular.nome = "Samuel Santos";
 		minhaConta.numero = 12289;
 		minhaConta.saldo = 202.01;
 
-		meuSonho.titular = "Jojoca Santos";
+		meuSonho.titular.nome = "Jojoca Santos";
 		meuSonho.numero = 12288;
 		meuSonho.saldo = 200000.86;
+				
 		
+		if(meuSonho.transferePara(minhaConta, 200010.00)) {
+			System.out.println("Operação efetuada com sucesso!!");
+		}else {
+			System.out.println("Erro ao tranferir...Verifique o saldo...!!");
+		}
 		
 		System.out.println("Saldo atual: " + minhaConta.saldo);
 
@@ -34,6 +40,7 @@ public class Programa {
 		
 		System.out.println("Saldo depois de depositar: " + minhaConta.saldo);
 		
+		System.out.println(minhaConta.recuperaDadosParaImpressao());
 	}
 
 }
