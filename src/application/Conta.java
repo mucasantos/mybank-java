@@ -3,14 +3,60 @@ package application;
 public class Conta {
 
 	// Atributos da conta
-	int numero;
-	Cliente titular = new Cliente();
-	int agencia;
-	double saldo;
-	String dataDeAbertura;
+	//mudando o modo de visualização
 
+	private int numero;
+	Cliente titular = new Cliente();
+	private int agencia;
+	private double saldo;
+	
+	//Valor default
+	private double limite = 1200.00;
+	private String dataDeAbertura;
+	
+	
+
+	
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public Cliente getTitular() {
+		return titular;
+	}
+
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+
+	public int getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+
+	public double getSaldo() {
+		return this.saldo + this.limite;
+	}
+
+	public String getDataDeAbertura() {
+		return dataDeAbertura;
+	}
+
+	public void setDataDeAbertura(String dataDeAbertura) {
+		this.dataDeAbertura = dataDeAbertura;
+	}
+
+	
 	// Métodos da conta
-	boolean sacar(double quantidade) {
+	 boolean sacar(double quantidade) {
+		 
 		if (this.saldo < quantidade) {
 			return false;
 		} else {
@@ -41,7 +87,7 @@ public class Conta {
 	}
 
 	String recuperaDadosParaImpressao() {
-		String dados = "Titular:	" + this.titular;
+		String dados = "Titular:	" + this.titular.getNome();
 		dados += "\nNúmero:	" + this.numero;
 		dados += "\nAgência:	" + this.agencia;
 		dados += "\nSaldo:	R$" + this.saldo;
