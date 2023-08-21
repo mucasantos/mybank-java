@@ -6,41 +6,37 @@ public class Conta {
 	//mudando o modo de visualização
 
 	private int numero;
-	Cliente titular = new Cliente();
+	Cliente titular ;
 	private int agencia;
 	private double saldo;
 	
 	//Valor default
-	private double limite = 1200.00;
+	private double limite ;
 	private String dataDeAbertura;
 	
-	
+	//Construtores
+			
+	public Conta(int numero, Cliente titular, int agencia, double saldo, double limite, String dataDeAbertura) {
+		this.numero = numero;
+		this.titular = titular;
+		this.agencia = agencia;
+		this.saldo = saldo;
+		this.limite = limite;
+		this.dataDeAbertura = dataDeAbertura;
+	}
 
-	
 	public int getNumero() {
 		return numero;
 	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
+	
 	public Cliente getTitular() {
 		return titular;
 	}
-
-	public void setTitular(Cliente titular) {
-		this.titular = titular;
-	}
-
+	
 	public int getAgencia() {
 		return agencia;
 	}
-
-	public void setAgencia(int agencia) {
-		this.agencia = agencia;
-	}
-
+	
 	public double getSaldo() {
 		return this.saldo + this.limite;
 	}
@@ -48,11 +44,6 @@ public class Conta {
 	public String getDataDeAbertura() {
 		return dataDeAbertura;
 	}
-
-	public void setDataDeAbertura(String dataDeAbertura) {
-		this.dataDeAbertura = dataDeAbertura;
-	}
-
 	
 	// Métodos da conta
 	 boolean sacar(double quantidade) {

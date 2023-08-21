@@ -9,24 +9,23 @@ public class Cliente {
 	private int anoNascimento;
 	
 	
+	public Cliente(String nome, String sobrenome, String cpf, String zapzap, String email, int anoNascimento) {
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.cpf = cpf;
+		this.zapzap = zapzap;
+		this.email = email;
+		this.anoNascimento = anoNascimento;
+	}
 	public String getNome() {
 		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+	}	
 	public String getSobrenome() {
 		return sobrenome;
-	}
-	public void setSobrenome(String sobrenome) {
-		this.sobrenome = sobrenome;
-	}
+	}	
 	public String getCpf() {
 		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
+	}	
 	public String getZapzap() {
 		return zapzap;
 	}
@@ -41,11 +40,5 @@ public class Cliente {
 	}
 	public int getAnoNascimento() {
 		return anoNascimento;
-	}
-	public void setAnoNascimento(int anoNascimento) {
-		this.anoNascimento = anoNascimento;
-	}
-	
-	
-	
+	}	
 }
