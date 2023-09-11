@@ -25,10 +25,5 @@ public class Programa {
 		System.out.println("Bonificação Limpeza");
 		System.out.println(limpeza.getSalario());
 		System.out.println(limpeza.bonificacao());
-		
-		
-
 	}
-	
-	
 }
