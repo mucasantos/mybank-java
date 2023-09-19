@@ -1,6 +1,8 @@
 package application;
 
-public class Funcionario {
+//mother class
+
+public abstract class Funcionario {
 	private String nome;
 	private String cpf;
 	protected double salario;

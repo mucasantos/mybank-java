@@ -6,15 +6,11 @@ public class Programa {
 		// TODO Auto-generated method stub
 
 		Gerente gerenteCotia = new Gerente();
+		CaixaDoBanco caixa = new CaixaDoBanco();
+		
 		
 		gerenteCotia.setNome("Welton");
 		gerenteCotia.setSalario(2000);
-		
-		Funcionario limpeza = new Funcionario();
-		
-		limpeza.setNome("Samuel");
-		limpeza.setSalario(500);
-		
 		
 		System.out.println(gerenteCotia.getNome());
 		System.out.println(gerenteCotia.getSalario());
@@ -23,7 +19,5 @@ public class Programa {
 		System.out.println(gerenteCotia.bonificacao());
 		
 		System.out.println("Bonificação Limpeza");
-		System.out.println(limpeza.getSalario());
-		System.out.println(limpeza.bonificacao());
 	}
 }
